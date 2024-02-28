@@ -10,7 +10,7 @@
 }
 .app {
   height: 100vh;
-  border: 10px solid;
+  background-color: #dcbfff;
 }
 header nav {
   display: flex;
@@ -27,7 +27,80 @@ header nav {
   align-items: center;
 }
 .main-content {
-  border: 1px solid;
-  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
   height: 600px;
+  background-color: #f1eaff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding: 30px;
+}
+
+.taskList {
+  width: 65%;
+  padding: 10px;
+  overflow: scroll;
+}
+.task {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: var(--primary);
+  margin-bottom: 20px;
+}
+.task i {
+  color: red;
+  cursor: pointer;
+}
+.task_head {
+  display: flex;
+  justify-content: space-between;
+}
+.task_head span {
+  margin-left: 5px;
+}
+.task_content {
+  /* border: 1px solid; */
+  background-color: #f1eaff;
+  margin-top: 20px;
+  margin: bottom 10px;
+  padding: 15px;
+}
+
+.form {
+  width: 35%;
+  padding: 10px;
+}
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  border-color: #d0a2f7;
+  background-color: #f1eaff;
+}
+.form button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: white;
+}
+
+@media (max-width: 786px) {
+  .app {
+    height: fit-content;
+  }
+  .main-content {
+    flex-direction: column-reverse;
+    justify-content: start;
+    padding: 10px;
+    width: 97%;
+    height: fit-content;
+  }
+  .taskList {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+  }
 }

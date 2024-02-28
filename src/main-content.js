@@ -1,3 +1,3 @@
-export function MainContent() {
-  return <div className="main-content">maincontent</div>;
+export function MainContent({ children }) { 
+  return <div className="main-content">{children}</div>;
 }
