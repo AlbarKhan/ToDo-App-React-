@@ -14,7 +14,7 @@ export default function App() {
       <Body>
         <MainContent>
           <TaskList tasklist={tasklist} setTaskList={setTaskList} />
-          <Form />
+          <Form tasklist={tasklist} setTaskList={setTaskList} />
         </MainContent>
       </Body>
     </div>
