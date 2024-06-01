@@ -1,7 +1,9 @@
 export function Header() {
   return (
     <header>
-      <nav>To-do App </nav>
+      <nav>
+        <h1>TO_DO APP</h1>{" "}
+      </nav>
     </header>
   );
 }

@@ -7,7 +7,11 @@ import { MainContent } from "./main-content";
 import { TaskList } from "./task_list";
 import { Form } from "./form";
 export default function App() {
-  const [tasklist, setTaskList] = useState(data);
+  const [tasklist, setTaskList] = useState(function () {
+    const storedData = localStorage.getItem("data");
+    return JSON.parse(storedData);
+  });
+
   return (
     <div className="app">
       <Header />
